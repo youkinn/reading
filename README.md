@@ -13,3 +13,10 @@ FAQ：
 2.一个普通的div的继承关系如下，EventTarget 是什么东西?
 
 → HTMLDivElement -> HTMLElement -> Element -> Node -> EventTarget -> Object
+
+
+
+
+###  队列
+-  优先队列
+-  循环队列
