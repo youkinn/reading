@@ -24,9 +24,9 @@
 
     // 如果值在集合中，返回true，否则返回false
     this.has = function (value) {
-      var list = this.values();
-      for (var i = 0, j = list.length; i < j; i++) {
-        if (value === list[i]) {
+      var values = this.values();
+      for (var i = 0, j = values.length; i < j; i++) {
+        if (value === values[i]) {
           return true;
         }
       }

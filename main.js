@@ -1,7 +1,25 @@
-require(['./static/js/lib/structure/Set'],
-  function (Set) {
+require(['./static/js/lib/structure/Dictionary'],
+  function (Dictionary) {
 
-    var s = new Set();
-    s.add(1);
-    s.add('1').print();
+    var s = new Dictionary();
+
+
+    s.set('Gandalf', 'gandalf@email.com');
+    s.set('John', 'johnsnow@email.com');
+    s.set('Tyrion', 'tyrion@email.com').print();
+
+    console.log(s.size());
+    s.remove('Gandalf');
+    console.log(s.size());
+
+    console.log(s.get('yex'));
+    s.remove('yex');
+    console.log(s.size());
+
+    console.log(s.keys());
+    console.log(s.values());
+
+    console.log(s.size());
+
+    console.log(s.clear().size());
   });
