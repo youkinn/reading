@@ -1,20 +1,4 @@
-# reading
-
--  dom、bom
--  getElementById
--  getElementsByTag
--  getAttribute
--  setAttribute
-
-FAQ：
-
-1.xml树跟html树的关系?js操作html/xml 方法是否一致?怎么操作xml?
-
-2.一个普通的div的继承关系如下，EventTarget 是什么东西?
-
-→ HTMLDivElement -> HTMLElement -> Element -> Node -> EventTarget -> Object
-
-
+## 数据结构
 
 ### 栈
 
@@ -54,4 +38,33 @@ FAQ：
 ### 散列表
 
 > 字典的散列表实现方式，使用散列函数可能会出现生成的散列冲突问题。
-> 解决方案：线性检测、双散列法、以及使用链表。
+> 解决方案：线性检测、双散列法、以及使用链表。 
+
+
+## 排序
+
+### 冒泡排序
+
+> 它重复地走访过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。 
+> 走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。 
+
+
+> ![Aaron Swartz](./static/images/bubbleSort.gif)
+
+### 选择排序
+
+> 每一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，直到全部待排序的数据元素排完。
+
+> ![Aaron Swartz](./static/images/selectionSort.gif)
+
+### 插入排序
+
+> 每步将一个待排序的数据，按其值的大小插入前面已经排序的文件中适当位置上，直到全部插入完为止。
+
+> ![Aaron Swartz](./static/images/insertionSort.gif)
+
+### 归并排序
+
+> 将已有序的子序列合并，得到完全有序的序列。即先使每个子序列有序，再使子序列段间有序。
+
+> ![Aaron Swartz](./static/images/mergeSort.gif)
