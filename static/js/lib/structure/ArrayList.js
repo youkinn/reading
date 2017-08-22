@@ -158,6 +158,53 @@
             array = mergeSortRec(array);
         };
 
+        /**
+         * 将每一个数据结构中的元素和我们要找的元素做比较，直到找到指定元素为止。
+         */
+        this.sequentialSearch = function (value) {
+            console.time('sequentialSearch');
+            for (var i = 0, j = array.length; i < j; i++) {
+                if (array[i] === value) {
+                    console.timeEnd('sequentialSearch');
+                    return i;
+                }
+            }
+            console.timeEnd('sequentialSearch');
+            return -1;
+        };
+
+        /**
+         * 二分搜索
+         * 
+         * 基本思想是将n个元素分成大致相等的两部分，取a[n/2]与x做比较，
+         * 如果x=a[n/2],则找到x,算法中止；
+         * 如果x<a[n/2],则只要在数组a的左半部分继续搜索x，如果x>a[n/2],则只要在数组a的右半部搜索x。
+         * 
+         */
+        this.binarySearch = function (value) {
+            console.time('binarySearch');
+            this.selectionSort();
+            var max = array.length - 1;
+            var min = 0;
+            var mid = 0;
+
+            while (min < max) {
+                mid = Math.floor((max + min) / 2);
+                if (value > array[mid]) {
+                    min = mid + 1;
+                }
+                else if (value < array[mid]) {
+                    max = mid - 1;
+                }
+                else {
+                    console.timeEnd('binarySearch');
+                    return mid;
+                }
+            }
+            console.timeEnd('binarySearch');
+            return -1;
+        };
+
         this.toString = function () {
             return array.join();
         };

@@ -10,6 +10,14 @@ require(['../lib/structure/ArrayList'], function (ArrayList) {
 
     array = createNonSortedArray(5);
     console.log(array.toString());
-    array.mergeSort();
-    console.log(array.toString());
+    // array.mergeSort();
+    debugger;
+    var index = array.binarySearch(5);
+    console.log(index);
+    index = array.binarySearch(48);
+    console.log(index);
+    index = array.sequentialSearch(5);
+    console.log(index);
+    index = array.sequentialSearch(48);
+    console.log(index);
 });
