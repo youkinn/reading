@@ -1,4 +1,4 @@
-require(['../lib/structure/BinarySearchTree'],
+require(['../lib/structure/BinarySearchTree.1'],
     function (BinarySearchTree) {
 
         var tree = new BinarySearchTree();
@@ -18,14 +18,14 @@ require(['../lib/structure/BinarySearchTree'],
         tree.insert(25);
         tree.insert(6);
 
-        // function printNode(value) {
-        //     console.log(value);
-        // }
+        tree.inOrderTraverse(printNode);
 
-        // tree.preOrderTraverse(printNode);
+        var result = tree.search(30);
+        console.log(result);
+        tree.insert(30);
+        tree.inOrderTraverse(printNode);
 
-        console.log(tree.search(30));
-
-        console.log('min:' + tree.min());
-        console.log('max:' + tree.max());
+        function printNode(value) {
+            console.log(value);
+        }
     });
