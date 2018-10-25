@@ -103,16 +103,10 @@
             var node;
             while (!q.isEmpty()) {
                 node = q.dequeue();
-                if (node.lChild) {
-                    q.enqueue(node.lChild);
-                } else {
-                    return insertAsLC(node, e);
-                }
-                if (node.rChild) {
-                    q.enqueue(node.rChild);
-                } else {
-                    return insertAsRC(node, e);
-                }
+                if (!node.lChild) return insertAsLC(node, e);
+                if (!node.rChild) return insertAsRC(node, e);
+                q.enqueue(node.lChild);
+                q.enqueue(node.rChild);
             }
         };
 
